@@ -1,4 +1,4 @@
-obj-m += hello_module.o
+obj-m += hello_debugfs.o
 
 K_BUILD_DIR=/lib/modules/$(shell uname -r)/build
 
