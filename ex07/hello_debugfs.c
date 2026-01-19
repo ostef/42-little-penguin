@@ -70,31 +70,37 @@ static ssize_t foo_read(struct file *f, char __user *buff, size_t len, loff_t *o
         if (!buff) {
                 return -EINVAL;
         }
-        if (*offset >= LOGIN_LENGTH) {
+        if (*offset >= foo_length) {
                 return 0;
         }
 
-        size_t copy_length = min(LOGIN_LENGTH - *offset, len);
-        size_t copied = copy_length - copy_to_user(buff, LOGIN + *offset, copy_length);
+        mutex_lock(&foo_buffer_mutex);
+
+        size_t copy_length = min(foo_length - *offset, len);
+        size_t copied = copy_length - copy_to_user(buff, foo_buffer + *offset, copy_length);
         *offset += copied;
+
+        mutex_unlock(&foo_buffer_mutex);
 
         return (ssize_t)copied;
 }
 
 static ssize_t foo_write(struct file *f, const char __user *buff, size_t len, loff_t *offset)
 {
-        char text[LOGIN_LENGTH];
+        if (!buff) {
+                return -EINVAL;
+        }
 
-        if (!buff || len != LOGIN_LENGTH) {
-                return -EINVAL;
-        }
-        if (copy_from_user(text, buff, len) > 0) {
-                return -EIO;
-        }
-        if (memcmp(text, LOGIN, LOGIN_LENGTH) != 0) {
-                return -EINVAL;
-        }
-        return LOGIN_LENGTH;
+        mutex_lock(&foo_buffer_mutex);
+
+        size_t copy_length = min(PAGE_SIZE - foo_length, len);
+        size_t copied = copy_length - copy_from_user(foo_buffer + foo_length, buff, copy_length);
+        foo_length += copied;
+        *offset = foo_length;
+
+        mutex_unlock(&foo_buffer_mutex);
+
+        return (ssize_t)copied;
 }
 
 static struct file_operations foo_file_ops = {
