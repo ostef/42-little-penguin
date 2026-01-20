@@ -7,6 +7,10 @@
 #include <linux/debugfs.h>
 #include <linux/jiffies.h>
 
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Stefan Oumansour");
+MODULE_DESCRIPTION("Simple misc device driver");
+
 #define LOGIN "soumanso"
 #define LOGIN_LENGTH (sizeof(LOGIN) - 1)
 
@@ -155,7 +159,3 @@ static void __exit hellodebugfs_exit(void)
 
 module_init(hellodebugfs_init);
 module_exit(hellodebugfs_exit);
-
-MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Stefan Oumansour");
-MODULE_DESCRIPTION("Simple misc device driver");

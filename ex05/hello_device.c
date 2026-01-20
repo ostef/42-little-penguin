@@ -5,6 +5,10 @@
 #include <linux/device.h>
 #include <linux/miscdevice.h>
 
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Stefan Oumansour");
+MODULE_DESCRIPTION("Simple misc device driver");
+
 #define LOGIN "soumanso"
 #define LOGIN_LENGTH (sizeof(LOGIN) - 1)
 
@@ -71,7 +75,3 @@ static void __exit hellodevice_exit(void)
 
 module_init(hellodevice_init);
 module_exit(hellodevice_exit);
-
-MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Stefan Oumansour");
-MODULE_DESCRIPTION("Simple misc device driver");

@@ -12,8 +12,9 @@ static int do_work(int *my_int, int retval) {
                 udelay(10);
         }
 
-        if (y < 10)
+        if (y < 10) {
                 pr_info("We slept a long time!");
+        }
 
         return y * y;
 }
