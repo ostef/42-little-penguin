@@ -58,7 +58,6 @@ ssize_t myfd_read(struct file *fp, char __user *user, size_t size, loff_t *offs)
 
         tmp[i] = 0;
 
-
         ssize_t bytes_read = simple_read_from_buffer(user, size, offs, tmp, i + 1);
 
         kfree(tmp);
