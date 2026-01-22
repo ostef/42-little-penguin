@@ -6,3 +6,6 @@
 *.symvers
 *.order
 *.out
+linux
+linux-next
+
