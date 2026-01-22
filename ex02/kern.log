@@ -1,0 +1,479 @@
+Jan 22 15:16:37 soumanso kernel: klogd 1.5.1, log source = /proc/kmsg started.
+Jan 22 15:16:37 soumanso kernel: Cannot find map file.
+Jan 22 15:16:37 soumanso kernel: Loaded 130017 symbols from 1 module.
+Jan 22 15:16:37 soumanso kernel: [    0.000000] Linux version 6.19.0-rc6-thor_kernel-soumanso-ga66191c590b3-dirty (root@soumanso) (gcc (GCC) 8.2.0, GNU ld (GNU Binutils) 2.32) #2 SMP PREEMPT_DYNAMIC Thu Jan 22 15:08:00 CET 2026
+Jan 22 15:16:37 soumanso kernel: [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-6.19-rc6-thor_kernel-soumanso root=/dev/sdb2 ro
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-provided physical RAM map:
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff] usable
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000de55ffff] usable
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x00000000de560000-0x00000000de5a8fff] reserved
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x00000000de5a9000-0x00000000deaecfff] usable
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x00000000deaed000-0x00000000ded6cfff] reserved
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x00000000ded6d000-0x00000000ded7efff] ACPI data
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x00000000ded7f000-0x00000000dedfefff] ACPI NVS
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x00000000dedff000-0x00000000df16dfff] usable
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x00000000df16e000-0x00000000dffeffff] reserved
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x00000000ffc00000-0x00000000ffffffff] reserved
+Jan 22 15:16:37 soumanso kernel: [    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000011fffffff] usable
+Jan 22 15:16:37 soumanso kernel: [    0.000000] NX (Execute Disable) protection: active
+Jan 22 15:16:37 soumanso kernel: [    0.000000] APIC: Static calls initialized
+Jan 22 15:16:37 soumanso kernel: [    0.000000] efi: EFI v2.7 by EDK II
+Jan 22 15:16:37 soumanso kernel: [    0.000000] efi: ACPI=0xded7e000 ACPI 2.0=0xded7e014 SMBIOS=0xdedfd000 RNG=0xded75018 
+Jan 22 15:16:37 soumanso kernel: [    0.000000] random: crng init done
+Jan 22 15:16:37 soumanso kernel: [    0.000000] efi: Remove mem128: MMIO range=[0xffc00000-0xffffffff] (4MB) from e820 map
+Jan 22 15:16:37 soumanso kernel: [    0.000000] e820: remove [mem 0xffc00000-0xffffffff] reserved
+Jan 22 15:16:37 soumanso kernel: [    0.000000] SMBIOS 2.5 present.
+Jan 22 15:16:37 soumanso kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Jan 22 15:16:37 soumanso kernel: [    0.000000] DMI: Memory slots populated: 0/0
+Jan 22 15:16:37 soumanso kernel: [    0.000000] tsc: Fast TSC calibration using PIT
+Jan 22 15:16:37 soumanso kernel: [    0.000000] tsc: Detected 3408.055 MHz processor
+Jan 22 15:16:37 soumanso kernel: [    0.000953] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Jan 22 15:16:37 soumanso kernel: [    0.000960] e820: remove [mem 0x000a0000-0x000fffff] usable
+Jan 22 15:16:37 soumanso kernel: [    0.000967] last_pfn = 0x120000 max_arch_pfn = 0x400000000
+Jan 22 15:16:37 soumanso kernel: [    0.001004] MTRR map: 6 entries (3 fixed + 3 variable; max 35), built from 16 variable MTRRs
+Jan 22 15:16:37 soumanso kernel: [    0.001008] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+Jan 22 15:16:37 soumanso kernel: [    0.001069] e820: update [mem 0xe0000000-0xffffffff] usable ==> reserved
+Jan 22 15:16:37 soumanso kernel: [    0.001079] last_pfn = 0xdf16e max_arch_pfn = 0x400000000
+Jan 22 15:16:37 soumanso kernel: [    0.001111] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+Jan 22 15:16:37 soumanso kernel: [    0.001390] Secure boot disabled
+Jan 22 15:16:37 soumanso kernel: [    0.001394] ACPI: Early table checksum verification disabled
+Jan 22 15:16:37 soumanso kernel: [    0.001397] ACPI: RSDP 0x00000000DED7E014 000024 (v02 VBOX  )
+Jan 22 15:16:37 soumanso kernel: [    0.001403] ACPI: XSDT 0x00000000DED7D0E8 000044 (v01 VBOX   VBOXFACP 00000001      01000013)
+Jan 22 15:16:37 soumanso kernel: [    0.001410] ACPI: FACP 0x00000000DED79000 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Jan 22 15:16:37 soumanso kernel: [    0.001417] ACPI: DSDT 0x00000000DED7A000 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20200925)
+Jan 22 15:16:37 soumanso kernel: [    0.001422] ACPI: FACS 0x00000000DEDFE000 000040
+Jan 22 15:16:37 soumanso kernel: [    0.001427] ACPI: APIC 0x00000000DED78000 00006C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Jan 22 15:16:37 soumanso kernel: [    0.001432] ACPI: SSDT 0x00000000DED77000 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20200925)
+Jan 22 15:16:37 soumanso kernel: [    0.001437] ACPI: BGRT 0x00000000DED76000 000038 (v01 INTEL  EDK2     00000002      01000013)
+Jan 22 15:16:37 soumanso kernel: [    0.001442] ACPI: Reserving FACP table memory at [mem 0xded79000-0xded790f3]
+Jan 22 15:16:37 soumanso kernel: [    0.001444] ACPI: Reserving DSDT table memory at [mem 0xded7a000-0xded7c352]
+Jan 22 15:16:37 soumanso kernel: [    0.001445] ACPI: Reserving FACS table memory at [mem 0xdedfe000-0xdedfe03f]
+Jan 22 15:16:37 soumanso kernel: [    0.001447] ACPI: Reserving APIC table memory at [mem 0xded78000-0xded7806b]
+Jan 22 15:16:37 soumanso kernel: [    0.001448] ACPI: Reserving SSDT table memory at [mem 0xded77000-0xded7736b]
+Jan 22 15:16:37 soumanso kernel: [    0.001450] ACPI: Reserving BGRT table memory at [mem 0xded76000-0xded76037]
+Jan 22 15:16:37 soumanso kernel: [    0.001668] No NUMA configuration found
+Jan 22 15:16:37 soumanso kernel: [    0.001670] Faking a node at [mem 0x0000000000000000-0x000000011fffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.001686] NODE_DATA(0) allocated [mem 0x11fff8900-0x11fffbfff]
+Jan 22 15:16:37 soumanso kernel: [    0.001699] Zone ranges:
+Jan 22 15:16:37 soumanso kernel: [    0.001700]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.001703]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.001706]   Normal   [mem 0x0000000100000000-0x000000011fffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.001709] Movable zone start for each node
+Jan 22 15:16:37 soumanso kernel: [    0.001710] Early memory node ranges
+Jan 22 15:16:37 soumanso kernel: [    0.001712]   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+Jan 22 15:16:37 soumanso kernel: [    0.001714]   node   0: [mem 0x0000000000100000-0x00000000de55ffff]
+Jan 22 15:16:37 soumanso kernel: [    0.001715]   node   0: [mem 0x00000000de5a9000-0x00000000deaecfff]
+Jan 22 15:16:37 soumanso kernel: [    0.001717]   node   0: [mem 0x00000000dedff000-0x00000000df16dfff]
+Jan 22 15:16:37 soumanso kernel: [    0.001718]   node   0: [mem 0x0000000100000000-0x000000011fffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.001720] Initmem setup node 0 [mem 0x0000000000001000-0x000000011fffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.001820] On node 0, zone DMA: 1 pages in unavailable ranges
+Jan 22 15:16:37 soumanso kernel: [    0.001834] On node 0, zone DMA: 96 pages in unavailable ranges
+Jan 22 15:16:37 soumanso kernel: [    0.007522] On node 0, zone DMA32: 73 pages in unavailable ranges
+Jan 22 15:16:37 soumanso kernel: [    0.007532] On node 0, zone DMA32: 786 pages in unavailable ranges
+Jan 22 15:16:37 soumanso kernel: [    0.008427] On node 0, zone Normal: 3730 pages in unavailable ranges
+Jan 22 15:16:37 soumanso kernel: [    0.008721] ACPI: PM-Timer IO Port: 0xb008
+Jan 22 15:16:37 soumanso kernel: [    0.008766] IOAPIC[0]: apic_id 4, version 32, address 0xfec00000, GSI 0-23
+Jan 22 15:16:37 soumanso kernel: [    0.008770] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Jan 22 15:16:37 soumanso kernel: [    0.008772] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+Jan 22 15:16:37 soumanso kernel: [    0.008776] ACPI: Using ACPI (MADT) for SMP configuration information
+Jan 22 15:16:37 soumanso kernel: [    0.008785] CPU topo: Max. logical packages:   1
+Jan 22 15:16:37 soumanso kernel: [    0.008786] CPU topo: Max. logical dies:       1
+Jan 22 15:16:37 soumanso kernel: [    0.008787] CPU topo: Max. dies per package:   1
+Jan 22 15:16:37 soumanso kernel: [    0.008795] CPU topo: Max. threads per core:   1
+Jan 22 15:16:37 soumanso kernel: [    0.008796] CPU topo: Num. cores per package:     4
+Jan 22 15:16:37 soumanso kernel: [    0.008797] CPU topo: Num. threads per package:   4
+Jan 22 15:16:37 soumanso kernel: [    0.008799] CPU topo: Allowing 4 present CPUs plus 0 hotplug CPUs
+Jan 22 15:16:37 soumanso kernel: [    0.008810] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Jan 22 15:16:37 soumanso kernel: [    0.008812] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+Jan 22 15:16:37 soumanso kernel: [    0.008814] PM: hibernation: Registered nosave memory: [mem 0xde560000-0xde5a8fff]
+Jan 22 15:16:37 soumanso kernel: [    0.008816] PM: hibernation: Registered nosave memory: [mem 0xdeaed000-0xdedfefff]
+Jan 22 15:16:37 soumanso kernel: [    0.008818] PM: hibernation: Registered nosave memory: [mem 0xdf16e000-0xffffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.008820] [mem 0xdfff0000-0xffffffff] available for PCI devices
+Jan 22 15:16:37 soumanso kernel: [    0.008824] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Jan 22 15:16:37 soumanso kernel: [    0.008830] setup_percpu: NR_CPUS:64 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+Jan 22 15:16:37 soumanso kernel: [    0.009064] percpu: Embedded 52 pages/cpu s174168 r8192 d30632 u524288
+Jan 22 15:16:37 soumanso kernel: [    0.009070] pcpu-alloc: s174168 r8192 d30632 u524288 alloc=1*2097152
+Jan 22 15:16:37 soumanso kernel: [    0.009074] pcpu-alloc: [0] 0 1 2 3 
+Jan 22 15:16:37 soumanso kernel: [    0.009092] Kernel command line: BOOT_IMAGE=/vmlinuz-6.19-rc6-thor_kernel-soumanso root=/dev/sdb2 ro
+Jan 22 15:16:37 soumanso kernel: [    0.009148] printk: log buffer data + meta data: 262144 + 917504 = 1179648 bytes
+Jan 22 15:16:37 soumanso kernel: [    0.009520] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.009762] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.009831] software IO TLB: area num 4.
+Jan 22 15:16:37 soumanso kernel: [    0.020626] Fallback order for Node 0: 0 
+Jan 22 15:16:37 soumanso kernel: [    0.020635] Built 1 zonelists, mobility grouping on.  Total pages: 1043890
+Jan 22 15:16:37 soumanso kernel: [    0.020637] Policy zone: Normal
+Jan 22 15:16:37 soumanso kernel: [    0.020639] mem auto-init: stack:off, heap alloc:off, heap free:off
+Jan 22 15:16:37 soumanso kernel: [    0.026407] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Jan 22 15:16:37 soumanso kernel: [    0.026423] Kernel/User page tables isolation: enabled
+Jan 22 15:16:37 soumanso kernel: [    0.027558] Dynamic Preempt: voluntary
+Jan 22 15:16:37 soumanso kernel: [    0.027694] rcu: Preemptible hierarchical RCU implementation.
+Jan 22 15:16:37 soumanso kernel: [    0.027695] rcu: ^IRCU event tracing is enabled.
+Jan 22 15:16:37 soumanso kernel: [    0.027697] rcu: ^IRCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+Jan 22 15:16:37 soumanso kernel: [    0.027699] ^ITrampoline variant of Tasks RCU enabled.
+Jan 22 15:16:37 soumanso kernel: [    0.027700] ^ITracing variant of Tasks RCU enabled.
+Jan 22 15:16:37 soumanso kernel: [    0.027701] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+Jan 22 15:16:37 soumanso kernel: [    0.027703] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+Jan 22 15:16:37 soumanso kernel: [    0.027709] RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Jan 22 15:16:37 soumanso kernel: [    0.027712] RCU Tasks Trace: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Jan 22 15:16:37 soumanso kernel: [    0.031399] NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16
+Jan 22 15:16:37 soumanso kernel: [    0.031589] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Jan 22 15:16:37 soumanso kernel: [    0.031662] Console: colour dummy device 80x25
+Jan 22 15:16:37 soumanso kernel: [    0.031682] printk: legacy console [tty0] enabled
+Jan 22 15:16:37 soumanso kernel: [    0.031986] ACPI: Core revision 20250807
+Jan 22 15:16:37 soumanso kernel: [    0.032068] APIC: Switch to symmetric I/O mode setup
+Jan 22 15:16:37 soumanso kernel: [    0.033407] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Jan 22 15:16:37 soumanso kernel: [    0.038063] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x312007a618b, max_idle_ns: 440795280075 ns
+Jan 22 15:16:37 soumanso kernel: [    0.038074] Calibrating delay loop (skipped), value calculated using timer frequency.. 6816.11 BogoMIPS (lpj=3408055)
+Jan 22 15:16:37 soumanso kernel: [    0.038202] Last level iTLB entries: 4KB 128, 2MB 8, 4MB 8
+Jan 22 15:16:37 soumanso kernel: [    0.038207] Last level dTLB entries: 4KB 64, 2MB 32, 4MB 32, 1GB 4
+Jan 22 15:16:37 soumanso kernel: [    0.038215] mitigations: Enabled attack vectors: user_kernel, user_user, SMT mitigations: auto
+Jan 22 15:16:37 soumanso kernel: [    0.038226] Speculative Store Bypass: Vulnerable
+Jan 22 15:16:37 soumanso kernel: [    0.038230] SRBDS: Unknown: Dependent on hypervisor status
+Jan 22 15:16:37 soumanso kernel: [    0.038234] Spectre V2 : Mitigation: Retpolines
+Jan 22 15:16:37 soumanso kernel: [    0.038237] RETBleed: Vulnerable
+Jan 22 15:16:37 soumanso kernel: [    0.038241] ITS: Mitigation: Aligned branch/return thunks
+Jan 22 15:16:37 soumanso kernel: [    0.038244] MDS: Mitigation: Clear CPU buffers
+Jan 22 15:16:37 soumanso kernel: [    0.038248] MMIO Stale Data: Mitigation: Clear CPU buffers
+Jan 22 15:16:37 soumanso kernel: [    0.038251] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Jan 22 15:16:37 soumanso kernel: [    0.038256] Spectre V2 : Spectre v2 / SpectreRSB: Filling RSB on context switch and VMEXIT
+Jan 22 15:16:37 soumanso kernel: [    0.038265] GDS: Unknown: Dependent on hypervisor status
+Jan 22 15:16:37 soumanso kernel: [    0.038269] active return thunk: its_return_thunk
+Jan 22 15:16:37 soumanso kernel: [    0.038283] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Jan 22 15:16:37 soumanso kernel: [    0.038289] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Jan 22 15:16:37 soumanso kernel: [    0.038293] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Jan 22 15:16:37 soumanso kernel: [    0.038297] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Jan 22 15:16:37 soumanso kernel: [    0.038301] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Jan 22 15:16:37 soumanso kernel: [    0.063534] Freeing SMP alternatives memory: 48K
+Jan 22 15:16:37 soumanso kernel: [    0.063545] pid_max: default: 32768 minimum: 301
+Jan 22 15:16:37 soumanso kernel: [    0.063580] SELinux:  Initializing.
+Jan 22 15:16:37 soumanso kernel: [    0.063722] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.063731] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.166208] smpboot: CPU0: Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz (family: 0x6, model: 0x9e, stepping: 0x9)
+Jan 22 15:16:37 soumanso kernel: [    0.166451] Performance Events: unsupported CPU family 6 model 158 no PMU driver, software events only.
+Jan 22 15:16:37 soumanso kernel: [    0.166480] signal: max sigframe size: 1776
+Jan 22 15:16:37 soumanso kernel: [    0.166524] rcu: Hierarchical SRCU implementation.
+Jan 22 15:16:37 soumanso kernel: [    0.166528] rcu: ^IMax phase no-delay instances is 400.
+Jan 22 15:16:37 soumanso kernel: [    0.166588] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+Jan 22 15:16:37 soumanso kernel: [    0.173021] smp: Bringing up secondary CPUs ...
+Jan 22 15:16:37 soumanso kernel: [    0.173172] smpboot: x86: Booting SMP configuration:
+Jan 22 15:16:37 soumanso kernel: [    0.173177] .... node  #0, CPUs:      #1 #2 #3
+Jan 22 15:16:37 soumanso kernel: [    0.177305] smp: Brought up 1 node, 4 CPUs
+Jan 22 15:16:37 soumanso kernel: [    0.177313] smpboot: Total of 4 processors activated (27264.44 BogoMIPS)
+Jan 22 15:16:37 soumanso kernel: [    0.178143] Memory: 3997080K/4175560K available (18426K kernel code, 2851K rwdata, 6212K rodata, 3016K init, 2100K bss, 174392K reserved, 0K cma-reserved)
+Jan 22 15:16:37 soumanso kernel: [    0.178264] devtmpfs: initialized
+Jan 22 15:16:37 soumanso kernel: [    0.179235] ACPI: PM: Registering ACPI NVS region [mem 0xded7f000-0xdedfefff] (524288 bytes)
+Jan 22 15:16:37 soumanso kernel: [    0.179235] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Jan 22 15:16:37 soumanso kernel: [    0.179235] posixtimers hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.179235] futex hash table entries: 1024 (65536 bytes on 1 NUMA nodes, total 64 KiB, linear).
+Jan 22 15:16:37 soumanso kernel: [    0.179235] PM: RTC time: 14:16:29, date: 2026-01-22
+Jan 22 15:16:37 soumanso kernel: [    0.179373] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Jan 22 15:16:37 soumanso kernel: [    0.179492] audit: initializing netlink subsys (disabled)
+Jan 22 15:16:37 soumanso kernel: [    0.180089] audit: type=2000 audit(1769091389.148:1): state=initialized audit_enabled=0 res=1
+Jan 22 15:16:37 soumanso kernel: [    0.180187] thermal_sys: Registered thermal governor 'step_wise'
+Jan 22 15:16:37 soumanso kernel: [    0.180189] thermal_sys: Registered thermal governor 'user_space'
+Jan 22 15:16:37 soumanso kernel: [    0.180203] cpuidle: using governor menu
+Jan 22 15:16:37 soumanso kernel: [    0.180339] PCI: Using configuration type 1 for base access
+Jan 22 15:16:37 soumanso kernel: [    0.180458] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+Jan 22 15:16:37 soumanso kernel: [    0.183383] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Jan 22 15:16:37 soumanso kernel: [    0.183389] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+Jan 22 15:16:37 soumanso kernel: [    0.185395] ACPI: Added _OSI(Module Device)
+Jan 22 15:16:37 soumanso kernel: [    0.185400] ACPI: Added _OSI(Processor Device)
+Jan 22 15:16:37 soumanso kernel: [    0.185403] ACPI: Added _OSI(Processor Aggregator Device)
+Jan 22 15:16:37 soumanso kernel: [    0.186698] ACPI: 2 ACPI AML tables successfully acquired and loaded
+Jan 22 15:16:37 soumanso kernel: [    0.187685] ACPI: Interpreter enabled
+Jan 22 15:16:37 soumanso kernel: [    0.187685] ACPI: PM: (supports S0 S5)
+Jan 22 15:16:37 soumanso kernel: [    0.188079] ACPI: Using IOAPIC for interrupt routing
+Jan 22 15:16:37 soumanso kernel: [    0.188179] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Jan 22 15:16:37 soumanso kernel: [    0.188185] PCI: Using E820 reservations for host bridge windows
+Jan 22 15:16:37 soumanso kernel: [    0.188258] ACPI: Enabled 2 GPEs in block 00 to 07
+Jan 22 15:16:37 soumanso kernel: [    0.191902] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Jan 22 15:16:37 soumanso kernel: [    0.191911] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+Jan 22 15:16:37 soumanso kernel: [    0.191918] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+Jan 22 15:16:37 soumanso kernel: [    0.192174] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended configuration space under this bridge
+Jan 22 15:16:37 soumanso kernel: [    0.192272] PCI host bridge to bus 0000:00
+Jan 22 15:16:37 soumanso kernel: [    0.192278] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Jan 22 15:16:37 soumanso kernel: [    0.192284] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Jan 22 15:16:37 soumanso kernel: [    0.192289] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Jan 22 15:16:37 soumanso kernel: [    0.192294] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+Jan 22 15:16:37 soumanso kernel: [    0.192299] pci_bus 0000:00: root bus resource [bus 00-ff]
+Jan 22 15:16:37 soumanso kernel: [    0.192434] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.192793] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.193180] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.193424] pci 0000:00:01.1: BAR 4 [io  0xc180-0xc18f]
+Jan 22 15:16:37 soumanso kernel: [    0.193458] pci 0000:00:01.1: BAR 0 [io  0x01f0-0x01f7]: legacy IDE quirk
+Jan 22 15:16:37 soumanso kernel: [    0.193463] pci 0000:00:01.1: BAR 1 [io  0x03f6]: legacy IDE quirk
+Jan 22 15:16:37 soumanso kernel: [    0.193467] pci 0000:00:01.1: BAR 2 [io  0x0170-0x0177]: legacy IDE quirk
+Jan 22 15:16:37 soumanso kernel: [    0.193472] pci 0000:00:01.1: BAR 3 [io  0x0376]: legacy IDE quirk
+Jan 22 15:16:37 soumanso kernel: [    0.193599] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.196077] pci 0000:00:02.0: BAR 0 [io  0xc170-0xc17f]
+Jan 22 15:16:37 soumanso kernel: [    0.196091] pci 0000:00:02.0: BAR 1 [mem 0xe0000000-0xe0ffffff pref]
+Jan 22 15:16:37 soumanso kernel: [    0.196102] pci 0000:00:02.0: BAR 2 [mem 0xe1400000-0xe15fffff]
+Jan 22 15:16:37 soumanso kernel: [    0.196165] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Jan 22 15:16:37 soumanso kernel: [    0.196315] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.197381] pci 0000:00:03.0: BAR 0 [mem 0xe1600000-0xe161ffff]
+Jan 22 15:16:37 soumanso kernel: [    0.197405] pci 0000:00:03.0: BAR 2 [io  0xc1a0-0xc1a7]
+Jan 22 15:16:37 soumanso kernel: [    0.197713] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.199283] pci 0000:00:04.0: BAR 0 [io  0xc140-0xc15f]
+Jan 22 15:16:37 soumanso kernel: [    0.199298] pci 0000:00:04.0: BAR 1 [mem 0xe1000000-0xe13fffff]
+Jan 22 15:16:37 soumanso kernel: [    0.199309] pci 0000:00:04.0: BAR 2 [mem 0xe1620000-0xe1623fff pref]
+Jan 22 15:16:37 soumanso kernel: [    0.200102] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.200298] pci 0000:00:05.0: BAR 0 [io  0xc000-0xc0ff]
+Jan 22 15:16:37 soumanso kernel: [    0.200309] pci 0000:00:05.0: BAR 1 [io  0xc100-0xc13f]
+Jan 22 15:16:37 soumanso kernel: [    0.200477] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.202317] pci 0000:00:06.0: BAR 0 [mem 0xe1627000-0xe1627fff]
+Jan 22 15:16:37 soumanso kernel: [    0.202612] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.202783] pci 0000:00:07.0: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+Jan 22 15:16:37 soumanso kernel: [    0.202796] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Jan 22 15:16:37 soumanso kernel: [    0.202975] pci 0000:00:0b.0: [8086:265c] type 00 class 0x0c0320 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.204279] pci 0000:00:0b.0: BAR 0 [mem 0xe1626000-0xe1626fff]
+Jan 22 15:16:37 soumanso kernel: [    0.205159] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601 conventional PCI endpoint
+Jan 22 15:16:37 soumanso kernel: [    0.206298] pci 0000:00:0d.0: BAR 0 [io  0xc198-0xc19f]
+Jan 22 15:16:37 soumanso kernel: [    0.206320] pci 0000:00:0d.0: BAR 1 [io  0xc1ac-0xc1af]
+Jan 22 15:16:37 soumanso kernel: [    0.206330] pci 0000:00:0d.0: BAR 2 [io  0xc190-0xc197]
+Jan 22 15:16:37 soumanso kernel: [    0.206341] pci 0000:00:0d.0: BAR 3 [io  0xc1a8-0xc1ab]
+Jan 22 15:16:37 soumanso kernel: [    0.206351] pci 0000:00:0d.0: BAR 4 [io  0xc160-0xc16f]
+Jan 22 15:16:37 soumanso kernel: [    0.206362] pci 0000:00:0d.0: BAR 5 [mem 0xe1624000-0xe1625fff]
+Jan 22 15:16:37 soumanso kernel: [    0.208812] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+Jan 22 15:16:37 soumanso kernel: [    0.208980] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+Jan 22 15:16:37 soumanso kernel: [    0.209024] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+Jan 22 15:16:37 soumanso kernel: [    0.209139] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+Jan 22 15:16:37 soumanso kernel: [    0.209249] iommu: Default domain type: Translated
+Jan 22 15:16:37 soumanso kernel: [    0.209254] iommu: DMA domain TLB invalidation policy: lazy mode
+Jan 22 15:16:37 soumanso kernel: [    0.209295] SCSI subsystem initialized
+Jan 22 15:16:37 soumanso kernel: [    0.209295] libata version 3.00 loaded.
+Jan 22 15:16:37 soumanso kernel: [    0.209295] ACPI: bus type USB registered
+Jan 22 15:16:37 soumanso kernel: [    0.209295] usbcore: registered new interface driver usbfs
+Jan 22 15:16:37 soumanso kernel: [    0.209295] usbcore: registered new interface driver hub
+Jan 22 15:16:37 soumanso kernel: [    0.209295] usbcore: registered new device driver usb
+Jan 22 15:16:37 soumanso kernel: [    0.210097] pps_core: LinuxPPS API ver. 1 registered
+Jan 22 15:16:37 soumanso kernel: [    0.210101] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Jan 22 15:16:37 soumanso kernel: [    0.210109] PTP clock support registered
+Jan 22 15:16:37 soumanso kernel: [    0.210157] EDAC MC: Ver: 3.0.0
+Jan 22 15:16:37 soumanso kernel: [    0.210307] efivars: Registered efivars operations
+Jan 22 15:16:37 soumanso kernel: [    0.210307] Advanced Linux Sound Architecture Driver Initialized.
+Jan 22 15:16:37 soumanso kernel: [    0.210307] NetLabel: Initializing
+Jan 22 15:16:37 soumanso kernel: [    0.210307] NetLabel:  domain hash size = 128
+Jan 22 15:16:37 soumanso kernel: [    0.211079] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Jan 22 15:16:37 soumanso kernel: [    0.211095] NetLabel:  unlabeled traffic allowed by default
+Jan 22 15:16:37 soumanso kernel: [    0.211145] PCI: Using ACPI for IRQ routing
+Jan 22 15:16:37 soumanso kernel: [    0.211145] PCI: pci_cache_line_size set to 64 bytes
+Jan 22 15:16:37 soumanso kernel: [    0.211241] e820: reserve RAM buffer [mem 0xde560000-0xdfffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.211246] e820: reserve RAM buffer [mem 0xdeaed000-0xdfffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.211248] e820: reserve RAM buffer [mem 0xdf16e000-0xdfffffff]
+Jan 22 15:16:37 soumanso kernel: [    0.211336] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Jan 22 15:16:37 soumanso kernel: [    0.211336] pci 0000:00:02.0: vgaarb: bridge control possible
+Jan 22 15:16:37 soumanso kernel: [    0.211336] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Jan 22 15:16:37 soumanso kernel: [    0.211336] vgaarb: loaded
+Jan 22 15:16:37 soumanso kernel: [    0.212764] clocksource: Switched to clocksource tsc-early
+Jan 22 15:16:37 soumanso kernel: [    0.212869] VFS: Disk quotas dquot_6.6.0
+Jan 22 15:16:37 soumanso kernel: [    0.212878] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Jan 22 15:16:37 soumanso kernel: [    0.216439] pnp: PnP ACPI init
+Jan 22 15:16:37 soumanso kernel: [    0.216932] pnp: PnP ACPI: found 2 devices
+Jan 22 15:16:37 soumanso kernel: [    0.227763] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Jan 22 15:16:37 soumanso kernel: [    0.227796] NET: Registered PF_INET protocol family
+Jan 22 15:16:37 soumanso kernel: [    0.227938] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.228589] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.228598] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.228606] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.228633] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.228725] TCP: Hash tables configured (established 32768 bind 32768)
+Jan 22 15:16:37 soumanso kernel: [    0.228743] UDP hash table entries: 2048 (order: 5, 131072 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.228758] UDP-Lite hash table entries: 2048 (order: 5, 131072 bytes, linear)
+Jan 22 15:16:37 soumanso kernel: [    0.228902] NET: Registered PF_UNIX/PF_LOCAL protocol family
+Jan 22 15:16:37 soumanso kernel: [    0.229196] RPC: Registered named UNIX socket transport module.
+Jan 22 15:16:37 soumanso kernel: [    0.229202] RPC: Registered udp transport module.
+Jan 22 15:16:37 soumanso kernel: [    0.229205] RPC: Registered tcp transport module.
+Jan 22 15:16:37 soumanso kernel: [    0.229208] RPC: Registered tcp-with-tls transport module.
+Jan 22 15:16:37 soumanso kernel: [    0.229212] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jan 22 15:16:37 soumanso kernel: [    0.229589] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Jan 22 15:16:37 soumanso kernel: [    0.229596] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Jan 22 15:16:37 soumanso kernel: [    0.229601] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Jan 22 15:16:37 soumanso kernel: [    0.229606] pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
+Jan 22 15:16:37 soumanso kernel: [    0.229643] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Jan 22 15:16:37 soumanso kernel: [    0.231146] PCI: CLS 0 bytes, default 64
+Jan 22 15:16:37 soumanso kernel: [    0.231204] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Jan 22 15:16:37 soumanso kernel: [    0.231209] software IO TLB: mapped [mem 0x00000000d7f9d000-0x00000000dbf9d000] (64MB)
+Jan 22 15:16:37 soumanso kernel: [    0.231255] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+Jan 22 15:16:37 soumanso kernel: [    0.231410] platform rtc_cmos: registered platform RTC device (no PNP device found)
+Jan 22 15:16:37 soumanso kernel: [    0.299921] Initialise system trusted keyrings
+Jan 22 15:16:37 soumanso kernel: [    0.300080] workingset: timestamp_bits=56 max_order=20 bucket_order=0
+Jan 22 15:16:37 soumanso kernel: [    0.300487] NFS: Registering the id_resolver key type
+Jan 22 15:16:37 soumanso kernel: [    0.300495] Key type id_resolver registered
+Jan 22 15:16:37 soumanso kernel: [    0.300499] Key type id_legacy registered
+Jan 22 15:16:37 soumanso kernel: [    0.314746] Key type asymmetric registered
+Jan 22 15:16:37 soumanso kernel: [    0.314753] Asymmetric key parser 'x509' registered
+Jan 22 15:16:37 soumanso kernel: [    0.314770] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+Jan 22 15:16:37 soumanso kernel: [    0.314777] io scheduler mq-deadline registered
+Jan 22 15:16:37 soumanso kernel: [    0.314781] io scheduler kyber registered
+Jan 22 15:16:37 soumanso kernel: [    0.315193] ACPI: AC: AC Adapter [AC] (on-line)
+Jan 22 15:16:37 soumanso kernel: [    0.315276] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Jan 22 15:16:37 soumanso kernel: [    0.315339] ACPI: button: Power Button [PWRF]
+Jan 22 15:16:37 soumanso kernel: [    0.315400] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Jan 22 15:16:37 soumanso kernel: [    0.315443] ACPI: button: Sleep Button [SLPF]
+Jan 22 15:16:37 soumanso kernel: [    0.315483] ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Jan 22 15:16:37 soumanso kernel: [    0.315538] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+Jan 22 15:16:37 soumanso kernel: [    0.316210] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Jan 22 15:16:37 soumanso kernel: [    0.317107] Non-volatile memory driver v1.3
+Jan 22 15:16:37 soumanso kernel: [    0.317114] Linux agpgart interface v0.103
+Jan 22 15:16:37 soumanso kernel: [    0.317181] ACPI: bus type drm_connector registered
+Jan 22 15:16:37 soumanso kernel: [    0.319533] loop: module loaded
+Jan 22 15:16:37 soumanso kernel: [    0.319969] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Jan 22 15:16:37 soumanso kernel: [    0.320083] ahci 0000:00:0d.0: AHCI vers 0001.0100, 32 command slots, 3 Gbps, SATA mode
+Jan 22 15:16:37 soumanso kernel: [    0.320090] ahci 0000:00:0d.0: 2/2 ports implemented (port mask 0x3)
+Jan 22 15:16:37 soumanso kernel: [    0.320095] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Jan 22 15:16:37 soumanso kernel: [    0.320654] scsi host0: ahci
+Jan 22 15:16:37 soumanso kernel: [    0.320929] scsi host1: ahci
+Jan 22 15:16:37 soumanso kernel: [    0.320982] ata1: SATA max UDMA/133 abar m8192@0xe1624000 port 0xe1624100 irq 21 lpm-pol 1
+Jan 22 15:16:37 soumanso kernel: [    0.320992] ata2: SATA max UDMA/133 abar m8192@0xe1624000 port 0xe1624180 irq 21 lpm-pol 1
+Jan 22 15:16:37 soumanso kernel: [    0.321692] scsi host2: ata_piix
+Jan 22 15:16:37 soumanso kernel: [    0.321917] scsi host3: ata_piix
+Jan 22 15:16:37 soumanso kernel: [    0.321952] ata3: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xc180 irq 14 lpm-pol 0
+Jan 22 15:16:37 soumanso kernel: [    0.321958] ata4: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xc188 irq 15 lpm-pol 0
+Jan 22 15:16:37 soumanso kernel: [    0.322296] e100: Intel(R) PRO/100 Network Driver
+Jan 22 15:16:37 soumanso kernel: [    0.322301] e100: Copyright(c) 1999-2006 Intel Corporation
+Jan 22 15:16:37 soumanso kernel: [    0.322316] e1000: Intel(R) PRO/1000 Network Driver
+Jan 22 15:16:37 soumanso kernel: [    0.322319] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Jan 22 15:16:37 soumanso kernel: [    0.497064] ata4.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Jan 22 15:16:37 soumanso kernel: [    0.633598] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Jan 22 15:16:37 soumanso kernel: [    0.633895] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Jan 22 15:16:37 soumanso kernel: [    0.633903] ata1.00: 31457280 sectors, multi 128: LBA48 NCQ (depth 32)
+Jan 22 15:16:37 soumanso kernel: [    0.634245] ata1.00: configured for UDMA/133
+Jan 22 15:16:37 soumanso kernel: [    0.634618] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Jan 22 15:16:37 soumanso kernel: [    0.635030] sd 0:0:0:0: Attached scsi generic sg0 type 0
+Jan 22 15:16:37 soumanso kernel: [    0.635073] sd 0:0:0:0: [sda] 31457280 512-byte logical blocks: (16.1 GB/15.0 GiB)
+Jan 22 15:16:37 soumanso kernel: [    0.635086] sd 0:0:0:0: [sda] Write Protect is off
+Jan 22 15:16:37 soumanso kernel: [    0.635090] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Jan 22 15:16:37 soumanso kernel: [    0.635112] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Jan 22 15:16:37 soumanso kernel: [    0.635166] sd 0:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+Jan 22 15:16:37 soumanso kernel: [    0.647539]  sda: sda1 sda2 < sda5 >
+Jan 22 15:16:37 soumanso kernel: [    0.647926] sd 0:0:0:0: [sda] Attached SCSI disk
+Jan 22 15:16:37 soumanso kernel: [    0.669049] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:64:11:ea
+Jan 22 15:16:37 soumanso kernel: [    0.669061] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Jan 22 15:16:37 soumanso kernel: [    0.669088] e1000e: Intel(R) PRO/1000 Network Driver
+Jan 22 15:16:37 soumanso kernel: [    0.669092] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+Jan 22 15:16:37 soumanso kernel: [    0.669108] sky2: driver version 1.30
+Jan 22 15:16:37 soumanso kernel: [    0.669724] ehci-pci 0000:00:0b.0: EHCI Host Controller
+Jan 22 15:16:37 soumanso kernel: [    0.670103] ehci-pci 0000:00:0b.0: new USB bus registered, assigned bus number 1
+Jan 22 15:16:37 soumanso kernel: [    0.670264] ehci-pci 0000:00:0b.0: irq 19, io mem 0xe1626000
+Jan 22 15:16:37 soumanso kernel: [    0.675443] ehci-pci 0000:00:0b.0: USB 2.0 started, EHCI 1.00
+Jan 22 15:16:37 soumanso kernel: [    0.675507] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.19
+Jan 22 15:16:37 soumanso kernel: [    0.675514] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jan 22 15:16:37 soumanso kernel: [    0.675519] usb usb1: Product: EHCI Host Controller
+Jan 22 15:16:37 soumanso kernel: [    0.675524] usb usb1: Manufacturer: Linux 6.19.0-rc6-thor_kernel-soumanso-ga66191c590b3-dirty ehci_hcd
+Jan 22 15:16:37 soumanso kernel: [    0.675529] usb usb1: SerialNumber: 0000:00:0b.0
+Jan 22 15:16:37 soumanso kernel: [    0.675711] hub 1-0:1.0: USB hub found
+Jan 22 15:16:37 soumanso kernel: [    0.675722] hub 1-0:1.0: 12 ports detected
+Jan 22 15:16:37 soumanso kernel: [    0.676018] ohci-pci 0000:00:06.0: OHCI PCI host controller
+Jan 22 15:16:37 soumanso kernel: [    0.676161] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 2
+Jan 22 15:16:37 soumanso kernel: [    0.676258] ohci-pci 0000:00:06.0: irq 22, io mem 0xe1627000
+Jan 22 15:16:37 soumanso kernel: [    0.727078] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.19
+Jan 22 15:16:37 soumanso kernel: [    0.727087] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jan 22 15:16:37 soumanso kernel: [    0.727092] usb usb2: Product: OHCI PCI host controller
+Jan 22 15:16:37 soumanso kernel: [    0.727097] usb usb2: Manufacturer: Linux 6.19.0-rc6-thor_kernel-soumanso-ga66191c590b3-dirty ohci_hcd
+Jan 22 15:16:37 soumanso kernel: [    0.727102] usb usb2: SerialNumber: 0000:00:06.0
+Jan 22 15:16:37 soumanso kernel: [    0.727295] hub 2-0:1.0: USB hub found
+Jan 22 15:16:37 soumanso kernel: [    0.727312] hub 2-0:1.0: 12 ports detected
+Jan 22 15:16:37 soumanso kernel: [    0.727871] usbcore: registered new interface driver usblp
+Jan 22 15:16:37 soumanso kernel: [    0.727892] usbcore: registered new interface driver usb-storage
+Jan 22 15:16:37 soumanso kernel: [    0.727927] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Jan 22 15:16:37 soumanso kernel: [    0.728457] serio: i8042 KBD port at 0x60,0x64 irq 1
+Jan 22 15:16:37 soumanso kernel: [    0.728465] serio: i8042 AUX port at 0x60,0x64 irq 12
+Jan 22 15:16:37 soumanso kernel: [    0.729122] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
+Jan 22 15:16:37 soumanso kernel: [    0.729867] rtc_cmos rtc_cmos: registered as rtc0
+Jan 22 15:16:37 soumanso kernel: [    0.729932] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Jan 22 15:16:37 soumanso kernel: [    0.730030] device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+Jan 22 15:16:37 soumanso kernel: [    0.730046] intel_pstate: CPU model not supported
+Jan 22 15:16:37 soumanso kernel: [    0.730088] efifb: probing for efifb
+Jan 22 15:16:37 soumanso kernel: [    0.730190] efifb: framebuffer at 0xe0000000, using 3072k, total 3072k
+Jan 22 15:16:37 soumanso kernel: [    0.730196] efifb: mode is 1024x768x32, linelength=4096, pages=1
+Jan 22 15:16:37 soumanso kernel: [    0.730201] efifb: scrolling: redraw
+Jan 22 15:16:37 soumanso kernel: [    0.730204] efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+Jan 22 15:16:37 soumanso kernel: [    0.732215] Console: switching to colour frame buffer device 128x48
+Jan 22 15:16:37 soumanso kernel: [    0.732697] fb0: EFI VGA frame buffer device
+Jan 22 15:16:37 soumanso kernel: [    0.732727] hid: raw HID events driver (C) Jiri Kosina
+Jan 22 15:16:37 soumanso kernel: [    0.733067] usbcore: registered new interface driver usbhid
+Jan 22 15:16:37 soumanso kernel: [    0.733084] usbhid: USB HID core driver
+Jan 22 15:16:37 soumanso kernel: [    0.733690] Initializing XFRM netlink socket
+Jan 22 15:16:37 soumanso kernel: [    0.733710] NET: Registered PF_INET6 protocol family
+Jan 22 15:16:37 soumanso kernel: [    0.734266] Segment Routing with IPv6
+Jan 22 15:16:37 soumanso kernel: [    0.734297] In-situ OAM (IOAM) with IPv6
+Jan 22 15:16:37 soumanso kernel: [    0.734400] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Jan 22 15:16:37 soumanso kernel: [    0.734642] NET: Registered PF_PACKET protocol family
+Jan 22 15:16:37 soumanso kernel: [    0.734666] Key type dns_resolver registered
+Jan 22 15:16:37 soumanso kernel: [    0.735322] IPI shorthand broadcast: enabled
+Jan 22 15:16:37 soumanso kernel: [    0.739457] sched_clock: Marking stable (738926512, 460248)->(744220403, -4833643)
+Jan 22 15:16:37 soumanso kernel: [    0.740569] registered taskstats version 1
+Jan 22 15:16:37 soumanso kernel: [    0.740580] Loading compiled-in X.509 certificates
+Jan 22 15:16:37 soumanso kernel: [    0.742634] Demotion targets for Node 0: null
+Jan 22 15:16:37 soumanso kernel: [    0.742933] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+Jan 22 15:16:37 soumanso kernel: [    0.743085] PM:   Magic number: 10:825:283
+Jan 22 15:16:37 soumanso kernel: [    0.743437] netconsole: network logging started
+Jan 22 15:16:37 soumanso kernel: [    0.745084] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Jan 22 15:16:37 soumanso kernel: [    0.745474] kworker/u17:5 (82) used greatest stack depth: 14960 bytes left
+Jan 22 15:16:37 soumanso kernel: [    0.746175] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Jan 22 15:16:37 soumanso kernel: [    0.746593] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+Jan 22 15:16:37 soumanso kernel: [    0.746859] clk: Disabling unused clocks
+Jan 22 15:16:37 soumanso kernel: [    0.747051] ALSA device list:
+Jan 22 15:16:37 soumanso kernel: [    0.747259]   No soundcards found.
+Jan 22 15:16:37 soumanso kernel: [    0.747484] check access for rdinit=/init failed: -2, ignoring
+Jan 22 15:16:37 soumanso kernel: [    0.747894] faux_driver regulatory: Direct firmware load for regulatory.db failed with error -2
+Jan 22 15:16:37 soumanso kernel: [    0.748063] cfg80211: failed to load regulatory.db
+Jan 22 15:16:37 soumanso kernel: [    0.949604] ata2: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Jan 22 15:16:37 soumanso kernel: [    0.951178] ata2.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Jan 22 15:16:37 soumanso kernel: [    0.951377] ata2.00: 41943040 sectors, multi 128: LBA48 NCQ (depth 32)
+Jan 22 15:16:37 soumanso kernel: [    0.951927] ata2.00: configured for UDMA/133
+Jan 22 15:16:37 soumanso kernel: [    0.952514] scsi 1:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Jan 22 15:16:37 soumanso kernel: [    0.952946] scsi 1:0:0:0: Attached scsi generic sg1 type 0
+Jan 22 15:16:37 soumanso kernel: [    0.953493] sd 1:0:0:0: [sdb] 41943040 512-byte logical blocks: (21.5 GB/20.0 GiB)
+Jan 22 15:16:37 soumanso kernel: [    0.953744] sd 1:0:0:0: [sdb] Write Protect is off
+Jan 22 15:16:37 soumanso kernel: [    0.953759] scsi 3:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Jan 22 15:16:37 soumanso kernel: [    0.953939] sd 1:0:0:0: [sdb] Mode Sense: 00 3a 00 00
+Jan 22 15:16:37 soumanso kernel: [    0.954149] sd 1:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Jan 22 15:16:37 soumanso kernel: [    0.954431] sd 1:0:0:0: [sdb] Preferred minimum I/O size 512 bytes
+Jan 22 15:16:37 soumanso kernel: [    0.967321]  sdb: sdb1 sdb2 sdb3
+Jan 22 15:16:37 soumanso kernel: [    0.968249] sr 3:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Jan 22 15:16:37 soumanso kernel: [    0.969531] sd 1:0:0:0: [sdb] Attached SCSI disk
+Jan 22 15:16:37 soumanso kernel: [    0.969636] cdrom: Uniform CD-ROM driver Revision: 3.20
+Jan 22 15:16:37 soumanso kernel: [    0.977163] sr 3:0:0:0: Attached scsi CD-ROM sr0
+Jan 22 15:16:37 soumanso kernel: [    0.977429] sr 3:0:0:0: Attached scsi generic sg2 type 5
+Jan 22 15:16:37 soumanso kernel: [    0.977979] md: Waiting for all devices to be available before autodetect
+Jan 22 15:16:37 soumanso kernel: [    0.978177] md: If you don't use raid, use raid=noautodetect
+Jan 22 15:16:37 soumanso kernel: [    0.978391] md: Autodetecting RAID arrays.
+Jan 22 15:16:37 soumanso kernel: [    0.978555] md: autorun ...
+Jan 22 15:16:37 soumanso kernel: [    0.978738] md: ... autorun DONE.
+Jan 22 15:16:37 soumanso kernel: [    0.985903] EXT4-fs (sdb2): mounted filesystem 20ad21a3-cb2e-4614-bda4-01ffb3e558de ro with ordered data mode. Quota mode: none.
+Jan 22 15:16:37 soumanso kernel: [    0.987508] VFS: Mounted root (ext4 filesystem) readonly on device 8:18.
+Jan 22 15:16:37 soumanso kernel: [    0.990457] devtmpfs: mounted
+Jan 22 15:16:37 soumanso kernel: [    0.991644] Freeing unused kernel image (initmem) memory: 3016K
+Jan 22 15:16:37 soumanso kernel: [    0.992014] Write protecting the kernel read-only data: 26624k
+Jan 22 15:16:37 soumanso kernel: [    0.992841] Freeing unused kernel image (text/rodata gap) memory: 4K
+Jan 22 15:16:37 soumanso kernel: [    0.993491] Freeing unused kernel image (rodata/data gap) memory: 1980K
+Jan 22 15:16:37 soumanso kernel: [    0.993745] Run /sbin/init as init process
+Jan 22 15:16:37 soumanso kernel: [    0.993945]   with arguments:
+Jan 22 15:16:37 soumanso kernel: [    0.993947]     /sbin/init
+Jan 22 15:16:37 soumanso kernel: [    0.993949]   with environment:
+Jan 22 15:16:37 soumanso kernel: [    0.993950]     HOME=/
+Jan 22 15:16:37 soumanso kernel: [    0.993952]     TERM=linux
+Jan 22 15:16:37 soumanso kernel: [    1.015403] usb 2-1: new full-speed USB device number 2 using ohci-pci
+Jan 22 15:16:37 soumanso kernel: [    1.270396] usb 2-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Jan 22 15:16:37 soumanso kernel: [    1.272043] usb 2-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Jan 22 15:16:37 soumanso kernel: [    1.272351] usb 2-1: Product: USB Tablet
+Jan 22 15:16:37 soumanso kernel: [    1.272487] usb 2-1: Manufacturer: VirtualBox
+Jan 22 15:16:37 soumanso kernel: [    1.279562] tsc: Refined TSC clocksource calibration: 3408.023 MHz
+Jan 22 15:16:37 soumanso kernel: [    1.281658] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x311fe999d8f, max_idle_ns: 440795290950 ns
+Jan 22 15:16:37 soumanso kernel: [    1.282327] clocksource: Switched to clocksource tsc
+Jan 22 15:16:37 soumanso kernel: [    1.284626] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.0/0003:80EE:0021.0001/input/input6
+Jan 22 15:16:37 soumanso kernel: [    1.285525] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Jan 22 15:16:37 soumanso kernel: [    1.353281] stty (96) used greatest stack depth: 12912 bytes left
+Jan 22 15:16:37 soumanso kernel: [    1.467331] dmesg (97) used greatest stack depth: 12168 bytes left
+Jan 22 15:16:37 soumanso kernel: [    1.530066] mountpoint (102) used greatest stack depth: 12008 bytes left
+Jan 22 15:16:37 soumanso kernel: [    1.582846] mountpoint (114) used greatest stack depth: 11856 bytes left
+Jan 22 15:16:37 soumanso kernel: <30>[    1.745954] udevd[173]: starting version 3.2.7
+Jan 22 15:16:37 soumanso kernel: <30>[    1.854141] udevd[174]: starting eudev-3.2.7
+Jan 22 15:16:37 soumanso kernel: [    1.895940] e1000 0000:00:03.0 enp0s3: renamed from eth0
+Jan 22 15:16:37 soumanso kernel: [    5.546110] clocksource: Long readout interval, skipping watchdog check: cs_nsec: 1002533644 wd_nsec: 1002533841
+Jan 22 15:16:37 soumanso kernel: [    6.590164] Adding 2097148k swap on /dev/sdb3.  Priority:1 extents:1 across:2097148k 
+Jan 22 15:16:37 soumanso kernel: [    6.622544] EXT4-fs (sdb2): re-mounted 20ad21a3-cb2e-4614-bda4-01ffb3e558de.
+Jan 22 15:16:37 soumanso kernel: [    6.712659] EXT4-fs (sdb2): re-mounted 20ad21a3-cb2e-4614-bda4-01ffb3e558de r/w.
+Jan 22 15:16:37 soumanso kernel: [    6.738900] FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+Jan 22 15:16:37 soumanso kernel: [    7.914036] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
