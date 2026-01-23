@@ -6,6 +6,11 @@
 #include <linux/fs.h>
 #include <linux/proc_fs.h>
 #include <linux/seq_file.h>
+#include <linux/mount.h>
+#include <linux/nsproxy.h>
+#include <linux/path.h>
+#include <linux/dcache.h>
+#include <linux/sched.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Stefan Oumansour");
@@ -35,14 +40,44 @@ MODULE_DESCRIPTION("Simple module to list mountpoints");
 //        seq_puts(file, " ");
 //}
 
-static int mymounts_procfs_show(struct seq_file *file, void *)
+static int show_mount_info(struct seq_file *file, void *v)
 {
+	struct mnt_namespace *ns;
+	struct mount *mnt;
+	char *buf;
+
+	ns = current->nsproxy->mnt_ns;
+	if (!ns)
+		return 0;
+
+	buf = kmalloc(PAGE_SIZE, GFP_KERNEL);
+	if (!buf)
+		return -ENOMEM;
+
+	seq_printf(file, "%-8s %-16s %s\n", "FS", "DEVICE", "MOUNTPOINT");
+	seq_puts(file, "----------------------------------------\n");
+
+	list_for_each_entry(mnt, &ns->list, mnt_list) {
+		struct path p = {
+			.mnt = &mnt->mnt,
+			.dentry = mnt->mnt.mnt_root
+		};
+		char *path;
+
+		path = d_path(&p, buf, PAGE_SIZE);
+		if (IS_ERR(path))
+			continue;
+
+		seq_printf(file, "%-8s %-16s %s\n", mnt->mnt.mnt_sb->s_type->name, mnt->mnt.mnt_sb->s_id, path);
+	}
+
+	kfree(buf);
 	return 0;
 }
 
 static int mymounts_procfs_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, mymounts_procfs_show, NULL);
+	return single_open(file, show_mount_info, NULL);
 }
 
 static struct proc_dir_entry *mymounts;
