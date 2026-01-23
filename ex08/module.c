@@ -27,7 +27,6 @@ static struct miscdevice myfd_device = {
 };
 
 static char str[PAGE_SIZE];
-static size_t str_length;
 static char *tmp;
 static DEFINE_MUTEX(myfd_mutex);
 
@@ -64,7 +63,7 @@ ssize_t myfd_read(struct file *fp, char __user *user, size_t size, loff_t *offs)
 
 	mutex_unlock(&myfd_mutex);
 
-	return o;
+	return bytes_read;
 }
 
 ssize_t myfd_write(struct file *fp, const char __user *user, size_t size, loff_t *offs)
