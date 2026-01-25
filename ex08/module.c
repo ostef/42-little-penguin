@@ -46,8 +46,10 @@ ssize_t myfd_read(struct file *fp, char __user *user, size_t size, loff_t *offs)
 	mutex_lock(&myfd_mutex);
 
 	tmp = kmalloc(PAGE_SIZE, GFP_KERNEL);
-	if (!tmp)
+	if (!tmp) {
+		mutex_unlock(&myfd_mutex);
 		return -ENOMEM;
+	}
 
 	ssize_t t = strlen(str) - 1;
 	ssize_t i;
