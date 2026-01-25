@@ -16,68 +16,71 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Stefan Oumansour");
 MODULE_DESCRIPTION("Simple module to list mountpoints");
 
-//static void show_mount_info(struct seq_file *file, struct mount *mnt)
-//{
-//        if (strcmp(mnt->mnt_devname, "rootfs") == 0) {
-//                return;
-//        }
-//
-//        struct path mnt_path = {
-//                .dentry = mnt->mnt.mnt_root,
-//                .mnt = &mnt->mnt,
-//        };
-//
-//        struct super_block *block = mnt_path.dentry->d_sb;
-//
-//        if (!sb->s_op->show_devname) {
-//                seq_puts(file, mnt->mnt_devname ? mnt->mnt_devname : "unnamed");
-//        } else {
-//                sb->s_op->show_devname(file, mnt_path.dentry);
-//        }
-//
-//        seq_puts(file, " ");
-//        seq_path(file, &mnt_path, " \t\n\\");
-//        seq_puts(file, " ");
-//}
+// static int show_mount_info(struct seq_file *file, void *v)
+// {
+// 	struct mnt_namespace *ns;
+// 	struct mount *mnt;
+// 	char *buf;
 
-static int show_mount_info(struct seq_file *file, void *v)
+// 	ns = current->nsproxy->mnt_ns;
+// 	if (!ns)
+// 		return 0;
+
+// 	buf = kmalloc(PAGE_SIZE, GFP_KERNEL);
+// 	if (!buf)
+// 		return -ENOMEM;
+
+// 	seq_printf(file, "%-8s %-16s %s\n", "FS", "DEVICE", "MOUNTPOINT");
+// 	seq_puts(file, "----------------------------------------\n");
+
+// 	list_for_each_entry(mnt, &ns->list, mnt_list) {
+// 		struct path p = {
+// 			.mnt = &mnt->mnt,
+// 			.dentry = mnt->mnt.mnt_root
+// 		};
+// 		char *path;
+
+// 		path = d_path(&p, buf, PAGE_SIZE);
+// 		if (IS_ERR(path))
+// 			continue;
+
+// 		seq_printf(file, "%-8s %-16s %s\n", mnt->mnt.mnt_sb->s_type->name, mnt->mnt.mnt_sb->s_id, path);
+// 	}
+
+// 	kfree(buf);
+// 	return 0;
+// }
+
+static int walk_mounts(struct seq_file *file, void *p)
 {
-	struct mnt_namespace *ns;
-	struct mount *mnt;
-	char *buf;
+	struct mount *mnt = p;
 
-	ns = current->nsproxy->mnt_ns;
-	if (!ns)
-		return 0;
+	struct path p = {
+		.mnt = &mnt->mnt,
+		.dentry = mnt->mnt.mnt_root,
+	};
 
-	buf = kmalloc(PAGE_SIZE, GFP_KERNEL);
-	if (!buf)
-		return -ENOMEM;
+	char *buf = kmalloc(PAGE_SIZE, GFP_KERNEL);
+	char *path = d_path(&p, buf, PAGE_SIZE);
 
-	seq_printf(file, "%-8s %-16s %s\n", "FS", "DEVICE", "MOUNTPOINT");
-	seq_puts(file, "----------------------------------------\n");
-
-	list_for_each_entry(mnt, &ns->list, mnt_list) {
-		struct path p = {
-			.mnt = &mnt->mnt,
-			.dentry = mnt->mnt.mnt_root
-		};
-		char *path;
-
-		path = d_path(&p, buf, PAGE_SIZE);
-		if (IS_ERR(path))
-			continue;
-
+	if (!IS_ERR(path)) {
 		seq_printf(file, "%-8s %-16s %s\n", mnt->mnt.mnt_sb->s_type->name, mnt->mnt.mnt_sb->s_id, path);
 	}
 
 	kfree(buf);
-	return 0;
+
+	list_for_each_entry(child, &mnt->mnt_mounts, mnt_child) {
+		walk_mounts(file, child);
+	}
 }
 
 static int mymounts_procfs_open(struct inode *inode, struct file *file)
 {
-	return single_open(file, show_mount_info, NULL);
+	struct mnt_namespace *ns = current->nsproxy->mnt_ns;
+	struct mount *root;
+
+	root = real_mount(ns->root);
+	return single_open(file, walk_mounts, root);
 }
 
 static struct proc_dir_entry *mymounts;
