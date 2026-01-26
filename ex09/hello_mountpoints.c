@@ -16,71 +16,84 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Stefan Oumansour");
 MODULE_DESCRIPTION("Simple module to list mountpoints");
 
-// static int show_mount_info(struct seq_file *file, void *v)
-// {
-// 	struct mnt_namespace *ns;
-// 	struct mount *mnt;
-// 	char *buf;
-
-// 	ns = current->nsproxy->mnt_ns;
-// 	if (!ns)
-// 		return 0;
-
-// 	buf = kmalloc(PAGE_SIZE, GFP_KERNEL);
-// 	if (!buf)
-// 		return -ENOMEM;
-
-// 	seq_printf(file, "%-8s %-16s %s\n", "FS", "DEVICE", "MOUNTPOINT");
-// 	seq_puts(file, "----------------------------------------\n");
-
-// 	list_for_each_entry(mnt, &ns->list, mnt_list) {
-// 		struct path p = {
-// 			.mnt = &mnt->mnt,
-// 			.dentry = mnt->mnt.mnt_root
-// 		};
-// 		char *path;
-
-// 		path = d_path(&p, buf, PAGE_SIZE);
-// 		if (IS_ERR(path))
-// 			continue;
-
-// 		seq_printf(file, "%-8s %-16s %s\n", mnt->mnt.mnt_sb->s_type->name, mnt->mnt.mnt_sb->s_id, path);
-// 	}
-
-// 	kfree(buf);
-// 	return 0;
-// }
-
-static int walk_mounts(struct seq_file *file, void *p)
+// Open /proc/self/mounts and read each line, print them back to seq_file
+static int show_mounts(struct seq_file *file, void *data)
 {
-	struct mount *mnt = p;
+	loff_t mounts_file_pos = 0;
+	struct file *mounts_file = filp_open("/proc/self/mounts", O_RDONLY, 0);
 
-	struct path p = {
-		.mnt = &mnt->mnt,
-		.dentry = mnt->mnt.mnt_root,
-	};
-
-	char *buf = kmalloc(PAGE_SIZE, GFP_KERNEL);
-	char *path = d_path(&p, buf, PAGE_SIZE);
-
-	if (!IS_ERR(path)) {
-		seq_printf(file, "%-8s %-16s %s\n", mnt->mnt.mnt_sb->s_type->name, mnt->mnt.mnt_sb->s_id, path);
+	if (IS_ERR(mounts_file)) {
+		pr_err("Could not open /proc/self/mounts file for reading\n");
+		return -PTR_ERR(mounts_file);
 	}
 
-	kfree(buf);
-
-	list_for_each_entry(child, &mnt->mnt_mounts, mnt_child) {
-		walk_mounts(file, child);
+	char *buff = kmalloc(PAGE_SIZE, GFP_KERNEL);
+	if (!buff) {
+		filp_close(mounts_file, NULL);
+		return -ENOMEM;
 	}
+
+	while (true) {
+		ssize_t read_bytes = kernel_read(mounts_file, buff, PAGE_SIZE - 1, &mounts_file_pos);
+
+		if (read_bytes <= 0) {
+			break;
+		}
+
+		buff[read_bytes] = 0;
+
+		char *line = buff;
+
+		while (line) {
+			char *newline = strchr(line, '\n');
+
+			if (newline) {
+				*newline = 0;
+				newline += 1;
+			}
+
+			if (strlen(line) == 0) {
+				line = newline;
+				continue;
+			}
+
+			char *device = strsep(&line, " ");
+			char *mount = strsep(&line, " ");
+			if (!device && !mount) {
+				line = newline;
+				continue;
+			}
+
+			if (device) {
+				seq_printf(file, "%s ", device);
+			} else {
+				seq_printf(file, "? ");
+			}
+
+			if (mount) {
+				seq_printf(file, "%s\n", mount);
+			} else {
+				seq_printf(file, "?\n");
+			}
+
+			line = newline;
+		}
+	}
+
+	kfree(buff);
+	filp_close(mounts_file, NULL);
+
+	return 0;
 }
 
 static int mymounts_procfs_open(struct inode *inode, struct file *file)
 {
-	struct mnt_namespace *ns = current->nsproxy->mnt_ns;
-	struct mount *root;
+	// struct mnt_namespace *ns = current->nsproxy->mnt_ns;
+	// struct mount *root;
 
-	root = real_mount(ns->root);
-	return single_open(file, walk_mounts, root);
+	// root = real_mount(ns->root);
+	// return single_open(file, walk_mounts, root);
+	return single_open(file, show_mounts, NULL);
 }
 
 static struct proc_dir_entry *mymounts;
