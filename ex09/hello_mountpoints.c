@@ -30,6 +30,7 @@ static int show_mounts(struct seq_file *file, void *data)
 	}
 
 	char *buff = kmalloc(PAGE_SIZE, GFP_KERNEL);
+
 	if (!buff) {
 		filp_close(mounts_file, NULL);
 		return -ENOMEM;
@@ -38,9 +39,8 @@ static int show_mounts(struct seq_file *file, void *data)
 	while (true) {
 		ssize_t read_bytes = kernel_read(mounts_file, buff, PAGE_SIZE - 1, &mounts_file_pos);
 
-		if (read_bytes <= 0) {
+		if (read_bytes <= 0)
 			break;
-		}
 
 		buff[read_bytes] = 0;
 
@@ -61,22 +61,21 @@ static int show_mounts(struct seq_file *file, void *data)
 
 			char *device = strsep(&line, " ");
 			char *mount = strsep(&line, " ");
+
 			if (!device && !mount) {
 				line = newline;
 				continue;
 			}
 
-			if (device) {
+			if (device)
 				seq_printf(file, "%s ", device);
-			} else {
-				seq_printf(file, "? ");
-			}
+			else
+				seq_puts(file, "? ");
 
-			if (mount) {
+			if (mount)
 				seq_printf(file, "%s\n", mount);
-			} else {
-				seq_printf(file, "?\n");
-			}
+			else
+				seq_puts(file, "?\n");
 
 			line = newline;
 		}

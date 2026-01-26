@@ -34,13 +34,11 @@ int main(int argc, char **argv)
 		"Module\n",
 	};
 
-	for (int i = 0; i < 5; i += 1) {
+	for (int i = 0; i < 5; i += 1)
 		pthread_create(&threads[i], NULL, thread_func, thread_data[i]);
-	}
 
-	for (int i = 0; i < 5; i += 1) {
+	for (int i = 0; i < 5; i += 1)
 		pthread_join(threads[i], NULL);
-	}
 
 	close(file);
 
