@@ -16,7 +16,9 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Stefan Oumansour");
 MODULE_DESCRIPTION("Simple module to list mountpoints");
 
-// Open /proc/self/mounts and read each line, print them back to seq_file
+// Open /proc/self/mounts and read each line, print them back to seq_file.
+// This is the only way to do it without relying on kernel hidden internals.
+// /proc/self/mounts is considered userspace, so this is not a good solution. It's fine for this simple exercise.
 static int show_mounts(struct seq_file *file, void *data)
 {
 	loff_t mounts_file_pos = 0;
