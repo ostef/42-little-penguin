@@ -16,7 +16,7 @@ static int __init hellomodule_init(void)
 
 static void __exit hellomodule_exit(void)
 {
-	pr_info("Cleaning up module.\n");
+	pr_info("Cleaning up hello world module\n");
 }
 
 module_init(hellomodule_init);
