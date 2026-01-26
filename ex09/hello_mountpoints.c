@@ -68,9 +68,9 @@ static int show_mounts(struct seq_file *file, void *data)
 			}
 
 			if (device)
-				seq_printf(file, "%s ", device);
+				seq_printf(file, "%10s ", device);
 			else
-				seq_puts(file, "? ");
+				seq_printf(file, "%10s ", "?");
 
 			if (mount)
 				seq_printf(file, "%s\n", mount);
