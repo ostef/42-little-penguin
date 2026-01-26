@@ -18,14 +18,7 @@ static ssize_t hellodevice_read(struct file *f, char __user *buff, size_t len, l
 {
 	if (!buff)
 		return -EINVAL;
-	if (*offset >= LOGIN_LENGTH)
-		return 0;
-
-	size_t copy_length = min(LOGIN_LENGTH - *offset, len);
-	size_t copied = copy_length - copy_to_user(buff, LOGIN + *offset, copy_length);
-	*offset += copied;
-
-	return (ssize_t)copied;
+	return simple_read_from_buffer(buff, len, offset, LOGIN, LOGIN_LENGTH);
 }
 
 static ssize_t hellodevice_write(struct file *f, const char __user *buff, size_t len, loff_t *offset)
