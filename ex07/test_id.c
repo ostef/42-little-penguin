@@ -64,5 +64,7 @@ int main(int argc, char **argv)
 	else
 		printf("TESTS PASSED\n");
 
+	close(file);
+
 	return status;
 }
