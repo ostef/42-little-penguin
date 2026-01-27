@@ -1,4 +1,4 @@
-obj-m += main.o
+obj-m += do_work.o
 
 K_BUILD_DIR=/lib/modules/$(shell uname -r)/build
 

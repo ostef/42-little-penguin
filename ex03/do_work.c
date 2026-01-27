@@ -6,6 +6,7 @@
 #include <linux/slab.h>
 
 MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Do some work then sleep a while");
 
 static int do_work(int *my_int, int retval)
 {
