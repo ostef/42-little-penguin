@@ -6,7 +6,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Stefan Oumansour");
-MODULE_DESCRIPTION("Simple hello world kernel module, with keyboard plugging detection");
+MODULE_DESCRIPTION("Simple hello world kernel module");
 
 static int __init hellokeyboard_init(void)
 {

@@ -1,0 +1,16 @@
+$> dmesg | tail -15
+[  571.847786] usb 1-1: USB disconnect, device number 10
+[  575.862355] usb 1-1: new full-speed USB device number 11 using xhci_hcd
+[  575.986864] usb 1-1: New USB device found, idVendor=3434, idProduct=0d13, bcdDevice= 1.00
+[  575.986882] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  575.986886] usb 1-1: Product:  Keychron K1 Version 6
+[  575.986889] usb 1-1: Manufacturer: Keychron
+[  575.991065] input: Keychron  Keychron K1 Version 6 as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0/0003:3434:0D13.000D/input/input33
+[  576.081567] hid-generic 0003:3434:0D13.000D: input,hidraw0: USB HID v1.11 Keyboard [Keychron  Keychron K1 Version 6] on usb-0000:00:14.0-1/input0
+[  576.083409] hid-generic 0003:3434:0D13.000E: hiddev0,hidraw1: USB HID v1.11 Device [Keychron  Keychron K1 Version 6] on usb-0000:00:14.0-1/input1
+[  576.085713] input: Keychron  Keychron K1 Version 6 Mouse as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.2/0003:3434:0D13.000F/input/input34
+[  576.086182] input: Keychron  Keychron K1 Version 6 System Control as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.2/0003:3434:0D13.000F/input/input35
+[  576.136703] input: Keychron  Keychron K1 Version 6 Consumer Control as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.2/0003:3434:0D13.000F/input/input36
+[  576.136977] input: Keychron  Keychron K1 Version 6 Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.2/0003:3434:0D13.000F/input/input37
+[  576.172725] hid-generic 0003:3434:0D13.000F: input,hidraw2: USB HID v1.11 Mouse [Keychron  Keychron K1 Version 6] on usb-0000:00:14.0-1/input2
+[  576.212396] Hello Keyboard!
