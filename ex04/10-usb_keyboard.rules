@@ -1,4 +1,4 @@
 SUBSYSTEM=="usb", \
 ACTION=="add", \
 ATTR{bInterfaceProtocol}=="01", \
-RUN+="/usr/sbin/insmod /home/stefan/Desktop/42-little-penguin/ex04/hello_keyboard.ko"
+RUN+="/usr/sbin/insmod /root/42-little-penguin/ex04/hello_keyboard.ko"
