@@ -1,4 +1,4 @@
-obj-m += module.o
+obj-m += reverse.o
 
 K_BUILD_DIR=/lib/modules/$(shell uname -r)/build
 

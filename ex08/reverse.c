@@ -27,7 +27,7 @@ static struct miscdevice myfd_device = {
 };
 
 static char str[PAGE_SIZE];
-static char *tmp;
+static size_t str_length;
 static DEFINE_MUTEX(myfd_mutex);
 
 static int __init myfd_init(void)
@@ -37,7 +37,6 @@ static int __init myfd_init(void)
 
 static void __exit myfd_cleanup(void)
 {
-	kfree(tmp);
 	misc_deregister(&myfd_device);
 }
 
@@ -45,13 +44,14 @@ ssize_t myfd_read(struct file *fp, char __user *user, size_t size, loff_t *offs)
 {
 	mutex_lock(&myfd_mutex);
 
-	tmp = kmalloc(PAGE_SIZE, GFP_KERNEL);
+	char *tmp = kmalloc(PAGE_SIZE, GFP_KERNEL);
+	
 	if (!tmp) {
 		mutex_unlock(&myfd_mutex);
 		return -ENOMEM;
 	}
 
-	ssize_t t = strlen(str) - 1;
+	ssize_t t = (ssize_t)str_length - 1;
 	ssize_t i;
 
 	for (i = 0; t >= 0; t--, i++)
@@ -72,7 +72,9 @@ ssize_t myfd_write(struct file *fp, const char __user *user, size_t size, loff_t
 {
 	mutex_lock(&myfd_mutex);
 
-	ssize_t bytes_written = simple_write_to_buffer(str, PAGE_SIZE - 1, offs, user, size);
+	ssize_t bytes_written = simple_write_to_buffer(str, PAGE_SIZE, offs, user, size);
+	if (*offs >= 0 && *offs <= PAGE_SIZE)
+		str_length = *offs;
 
 	mutex_unlock(&myfd_mutex);
 
